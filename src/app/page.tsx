@@ -6,7 +6,7 @@ import Testimonial from "@/components/Testimonial";
 
 export default function Home() {
   return (
-    <main className="bg-background-50 text-text-950">
+    <main className="">
       <Hero />
       <Features />
       <About />
