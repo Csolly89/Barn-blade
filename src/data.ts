@@ -1,3 +1,5 @@
+// data.ts
+
 interface Product {
     name: string;
     description: string;
@@ -6,6 +8,8 @@ interface Product {
 
 interface Category {
     name: string;
+    id: number;
+    desc: string;
     breeds?: string[]; // Breeds applicable to the category
     cuts: Product[];
 }
@@ -13,6 +17,8 @@ interface Category {
 // Beef category with breeds and cuts
 const beefCategory: Category = {
     name: "Beef",
+    id: 1,
+    desc: "High-quality beef cuts sourced from a variety of premium breeds, offering a range of flavors and textures for every culinary need.",
     breeds: ["American Wagyu", "Black Angus", "Hereford"],
     cuts: [
         { name: "Ribeye", description: "Richly marbled steak, juicy and flavorful.", price: 19.99 },
@@ -38,6 +44,8 @@ const beefCategory: Category = {
 // Pork category with breeds and cuts
 const porkCategory: Category = {
     name: "Pork",
+    id: 2,
+    desc: "A variety of pork cuts from well-regarded breeds, known for their tenderness and flavor, perfect for a wide range of dishes.",
     breeds: ["Berkshire", "Duroc", "Yorkshire"],
     cuts: [
         { name: "Blade Chop", description: "Flavorful pork chop cut from the shoulder.", price: 9.99 },
@@ -56,6 +64,8 @@ const porkCategory: Category = {
 // Chicken category without breed options
 const chickenCategory: Category = {
     name: "Chicken",
+    id: 3,
+    desc: "Fresh, high-quality chicken cuts suitable for grilling, roasting, and frying, offering lean and flavorful options for any meal.",
     cuts: [
         { name: "Drumsticks", description: "Juicy and tender chicken legs.", price: 3.99 },
         { name: "Wings", description: "Perfect for frying or grilling, flavorful and fun.", price: 4.99 },
@@ -70,4 +80,3 @@ const chickenCategory: Category = {
 
 // Export categories
 export const categories = [beefCategory, porkCategory, chickenCategory];
-

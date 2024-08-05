@@ -23,7 +23,9 @@ export default function RootLayout({
     <body className={inter.className}>
       <HeroNav />
       <Notification />
+      <div className='mt-[6rem]'>
       {children}
+      </div>
       <Footer />
     </body>
   </html>
